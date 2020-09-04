@@ -1,0 +1,28 @@
+{
+  "name": "employee-page-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "jest": "^26.4.2",
+    "inquirer": "^7.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NTKonzen/Employee-Page-Generator.git"
+  },
+  "author": "Nicholas Konzen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NTKonzen/Employee-Page-Generator/issues"
+  },
+  "homepage": "https://github.com/NTKonzen/Employee-Page-Generator#readme"
+}
