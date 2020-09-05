@@ -16,4 +16,9 @@ describe('Employee Class', () => {
             expect(new Employee('jim', 1, 'email').getEmail()).toBe('email')
         })
     })
+    describe('getRole', () => {
+        it('returns the employee\'s role', () => {
+            expect(new Employee('jim', 1, 'email').getRole()).toBe('Employee')
+        })
+    })
 })
