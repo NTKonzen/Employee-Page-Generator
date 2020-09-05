@@ -16,4 +16,14 @@ describe('Intern Class', () => {
             expect(new Intern('Samantha', 4, 'email', 'Stanford').getEmail()).toBe('email')
         })
     })
+    describe('getRole', () => {
+        it('returns the Intern\'s role', () => {
+            expect(new Intern('Samantha', 4, 'email', 'Stanford').getRole()).toBe('Intern')
+        })
+    })
+    describe('getSchool', () => {
+        it('returns the Intern\'s school', () => {
+            expect(new Intern('Samantha', 4, 'email', 'Stanford').getSchool()).toBe('Stanford')
+        })
+    })
 })
