@@ -8,6 +8,20 @@ const Templates = require('./templates/templates')
 
 const employeeArray = []
 
+function writeToFile(fileName, data) {
+    if (!fs.existsSync('./generated-files')) {
+        fs.mkdir('./generated-files', (err) => { if (err) throw err })
+    }
+
+    fs.writeFile(fileName, data, { encoding: 'utf8', recursive: true }, function (err) {
+        if (err) {
+            console.log(err.message)
+        } else {
+            console.log(`Success! File was written to ${fileName}`)
+        }
+    })
+};
+
 async function getManagers() {
     do {
         let newMan = await inquirer.prompt([
@@ -111,11 +125,10 @@ async function main() {
             employeeArray[index] = Templates.getEngineer(employeeObj.name, employeeObj.id, employeeObj.github, employeeObj.email)
         } else if (employeeObj.getRole() === 'Intern') {
             employeeArray[index] = Templates.getIntern(employeeObj.name, employeeObj.id, employeeObj.school, employeeObj.email)
-            console.log(employeeObj.getRole())
-            console.log(employeeArray[index])
         }
     })
 
+    writeToFile('./generated-files/team.html', Templates.generatePage(employeeArray))
 
 }
 
