@@ -9,8 +9,8 @@ const Templates = require('./templates/templates')
 const employeeArray = []
 
 function writeToFile(fileName, data) {
-    if (!fs.existsSync('./generated-files')) {
-        fs.mkdir('./generated-files', (err) => { if (err) throw err })
+    if (!fs.existsSync('./output')) {
+        fs.mkdir('./output', (err) => { if (err) throw err })
     }
 
     fs.writeFile(fileName, data, { encoding: 'utf8', recursive: true }, function (err) {
@@ -128,7 +128,7 @@ async function main() {
         }
     })
 
-    writeToFile('./generated-files/team.html', Templates.generatePage(employeeArray))
+    writeToFile('./output/team.html', Templates.generatePage(employeeArray))
 
 }
 
