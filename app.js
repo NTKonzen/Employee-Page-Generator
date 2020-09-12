@@ -22,7 +22,7 @@ async function getManagers() {
             }, {
                 name: 'email',
                 type: 'input',
-                message: 'Enter this manager\'s office number: \n'
+                message: 'Enter this manager\'s email: \n'
             }, {
                 name: 'officeNumber',
                 type: 'input',
