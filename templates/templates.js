@@ -80,8 +80,7 @@ const Templates = {
         
         <style>
             body {
-                /* background-image: url(./textured_paper_@2X.png); */
-                background-image: url(./paper_fibers_@2X.png);
+                background-image: url(./assets/images/paper_fibers_@2X.png);
             }
         
             .jumbotron {

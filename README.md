@@ -12,14 +12,16 @@
 
 ## Description ##
 
-This is a simple command line application that generates a simple employee html document for any tech company all based off of user input. This includes three 'types' of employees, those being: managers, engineers, and interns. I wrote this program primarily to test my understanding of javascript classes and subclasses, but this can be used by anyone that needs a quick and easy way to build an employee page for their website! In general, this saves a lot of time as opposed to building the page from scratch. This application was built using javascript and a few Node.js packages. 
+This is a simple command line application that generates a simple employee html document for any tech company all based off of user input. This includes three 'types' of employees, those being: managers, engineers, and interns. I wrote this program primarily to test my understanding of javascript classes and subclasses, but this can be used by anyone that needs a quick and easy way to build an employee page for their website! In general, this saves a lot of time as opposed to building the page from scratch. This application was built using javascript and a few Node.js packages.
+
+![A screenshot of a generated employee page](./assets/images/screenshot1.png)
 
 ### Installation ###
 
 1. Download the .zip file from [here](https://github.com/NTKonzen/Employee-Page-Generator)
 1. Unzip the file and relocate it where you like
 1. Open the unzipped folder in your preferred command shell
-1. enter 'npm install' to install the dependent packages 
+1. Enter 'npm install' to install the dependent packages 
 
 ### Usage
 
@@ -31,7 +33,6 @@ This is a simple command line application that generates a simple employee html 
 ### Tests
 
 * Run 'npm test' to ensure all methods are working properly
-
 
 ### Contributors
 
