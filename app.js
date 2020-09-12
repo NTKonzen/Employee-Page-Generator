@@ -114,9 +114,25 @@ async function main() {
 
     await getManagers()
 
-    await getEngineers()
+    await inquirer.prompt({
+        name: 'hasEngineers',
+        type: 'confirm',
+        message: 'Do you have any engineers on your team?'
+    }).then(async data => {
+        if (data.hasEngineers) {
+            await getEngineers()
+        }
+    })
 
-    await getInterns()
+    await inquirer.prompt({
+        name: 'hasInterns',
+        type: 'confirm',
+        message: 'Do you have any interns on your team?'
+    }).then(async data => {
+        if (data.hasInterns) {
+            await getInterns()
+        }
+    })
 
     employeeArray.forEach((employeeObj, index) => {
         if (employeeObj.getRole() === 'Manager') {
