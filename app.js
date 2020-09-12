@@ -37,18 +37,47 @@ async function getManagers() {
         employeeArray.push(new Manager(newMan.name, newMan.id, newMan.email, newMan.officeNumber))
     } while (more.more === true)
 }
+async function getEngineers() {
+    do {
+        let newEng = await inquirer.prompt([
+            {
+                name: 'name',
+                type: 'input',
+                message: 'Enter the name of this engineer: \n'
+            }, {
+                name: 'id',
+                type: 'input',
+                message: 'Enter this engineer\'s id: \n'
+            }, {
+                name: 'email',
+                type: 'input',
+                message: 'Enter this engineer\'s email: \n'
+            }, {
+                name: 'github',
+                type: 'input',
+                message: 'Enter this engineer\s GitHub username'
+            }
+        ])
+        var more = await inquirer.prompt({
+            name: 'more',
+            type: 'confirm',
+            message: 'Do you want to add another engineer?\n'
+        })
+        employeeArray.push(new Engineer(newEng.name, newEng.id, newEng.email, newEng.github))
+    } while (more.more === true)
+}
 
 async function main() {
 
     await getManagers()
 
+    await getEngineers()
+
     employeeArray.forEach((employeeObj, index) => {
-        console.log(index)
         if (employeeObj.getRole() === 'Manager') {
             employeeArray[index] = Templates.getManager(employeeObj.name, employeeObj.id, employeeObj.officeNumber, employeeObj.email)
         } else if (employeeObj.getRole() === 'Engineer') {
             employeeArray[index] = Templates.getEngineer(employeeObj.name, employeeObj.id, employeeObj.github, employeeObj.email)
-            console.log(employeeObj.getRole())
         } else if (employeeObj.getRole() === 'Intern') {
             employeeArray[index] = Templates.getIntern(employeeObj.name, employeeObj.id, employeeObj.school, employeeObj.email)
             console.log(employeeObj.getRole())
