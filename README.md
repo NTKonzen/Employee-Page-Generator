@@ -12,7 +12,7 @@
 
 ## Description ##
 
-This is a simple command line application that generates a simple employee html document from user input. I created this for anyone that needs a quick and easy way to build an employee page for their website! In general, this saves a lot of time as opposed to building the page from scratch. I built this application using javascript and a few Node.js packages. 
+This is a simple command line application that generates a simple employee html document for any tech company all based off of user input. This includes three 'types' of employees, those being: managers, engineers, and interns. I wrote this program primarily to test my understanding of javascript classes and subclasses, but this can be used by anyone that needs a quick and easy way to build an employee page for their website! In general, this saves a lot of time as opposed to building the page from scratch. This application was built using javascript and a few Node.js packages. 
 
 ### Installation ###
 
