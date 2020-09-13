@@ -18,12 +18,16 @@ This is a simple command line application that generates a simple employee html 
 
 ### Installation ###
 
+[Click here to watch the tutorial on Youtube](https://youtu.be/Rsm47FpZLDU)
+
 1. Download the .zip file from [here](https://github.com/NTKonzen/Employee-Page-Generator)
 1. Unzip the file and relocate it where you like
 1. Open the unzipped folder in your preferred command shell
 1. Enter 'npm install' to install the dependent packages 
 
 ### Usage
+
+[Click here to watch the tutorial on Youtube](https://youtu.be/Rsm47FpZLDU)
 
 1. Navigate to the Employee-Page-Generator file in your preferred command shell
 1. Run 'node app'
